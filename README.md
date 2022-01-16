@@ -9,7 +9,7 @@ Data analysis to settle
 # Quick view
 
 데이터 정제 및 변환
-'''
+'''R
 data01 <- data[-1,]
 col01 <- data01[,2] 
 timeCol <- data01[,1] # 인덱스로 만들기
