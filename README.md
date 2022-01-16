@@ -65,5 +65,5 @@ dyplot.prophet(dataProphet01, forecast01) # 동적 Prophet 그래프
 <img src="https://user-images.githubusercontent.com/92314150/149647239-755eb74b-1b92-4b66-bcd7-dfa2b35db551.jpg" width="500" height="400"/>
 최종결과물 풀샷
 
-<img src="https://user-images.githubusercontent.com/92314150/149647242-c211a21b-2698-4263-8f6e-8c11e7044cc0.jpg" width="500" height="400"/>
+<img src="https://user-images.githubusercontent.com/92314150/149647242-c211a21b-2698-4263-8f6e-8c11e7044cc0.jpg" width="400" height="400"/>
 
