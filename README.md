@@ -9,7 +9,8 @@ Data analysis to settle
 # Quick view
 
 데이터 정제 및 변환
-'''R
+'''
+
 data01 <- data[-1,]
 col01 <- data01[,2] 
 timeCol <- data01[,1] # 인덱스로 만들기
@@ -17,6 +18,7 @@ timeCol <- data01[,1] # 인덱스로 만들기
 # drop01 <- data.frame(timeCol,col01)
 col01 <- as.numeric(col01)
 drop01 <- ts(col01,frequency=1440,start=2020) # 적절한 시계열 형태로 만들기(x 범례 값)
+
 '''
 
 # 마지막 3년 측정
