@@ -19,8 +19,6 @@ col01 <- as.numeric(col01)
 drop01 <- ts(col01,frequency=1440,start=2020) # 적절한 시계열 형태로 만들기(x 범례 값)
 ```
 
-- 마지막 3년 측정
-
 ARIMA 시행
 ```
 auto.arima(drop01)
@@ -29,7 +27,7 @@ auto.arima(drop01)
 ARIMA 그래프 그리기
 ```
 sampleForecast01 <- arima(drop01, order=c(0,0,1))
-arima_predict01 <- forecast(sampleForecast01,h=3) # 3년 예측
+arima_predict01 <- forecast(sampleForecast01,h=3) # 끝에서 3년 예측
 samplePlot01 <- forecast(arima(drop01, order=c(0,0,1)), h=3)
 autoplot(samplePlot01, include = 30) # 그래프 그리기
 ```
