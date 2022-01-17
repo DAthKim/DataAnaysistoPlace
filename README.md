@@ -19,7 +19,7 @@ col01 <- as.numeric(col01)
 drop01 <- ts(col01,frequency=1440,start=2020) # 적절한 시계열 형태로 만들기(x 범례 값)
 ```
 
-마지막 3년 측정
+- 마지막 3년 측정
 
 ARIMA 시행
 ```
