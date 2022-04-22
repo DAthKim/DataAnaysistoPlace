@@ -9,7 +9,7 @@ Data analysis to place
 # Quick view
 
 데이터 정제 및 변환
-```
+```R
 data01 <- data[-1,]
 col01 <- data01[,2] 
 timeCol <- data01[,1] # 인덱스로 만들기
@@ -20,12 +20,12 @@ drop01 <- ts(col01,frequency=1440,start=2020) # 적절한 시계열 형태로 �
 ```
 
 ARIMA 시행
-```
+```R
 auto.arima(drop01)
 ```
 
 ARIMA 그래프 그리기
-```
+```R
 sampleForecast01 <- arima(drop01, order=c(0,0,1))
 arima_predict01 <- forecast(sampleForecast01,h=3) # 끝에서 3년 예측
 samplePlot01 <- forecast(arima(drop01, order=c(0,0,1)), h=3)
@@ -33,7 +33,7 @@ autoplot(samplePlot01, include = 30) # 그래프 그리기
 ```
 
 EDA
-```
+```R
 psample01 <- data[,c('V1','V2')]
 psample01 <- psample[-1,]
 names(psample01)[1]<-"ds"
@@ -44,7 +44,7 @@ plot(ds2,psample01$y)
 ```
 
 Prophet 적용
-```
+```R
 dataProphet01 <- prophet(psample01,yearly.seasonality = TRUE,
                        weekly.seasonality = TRUE, daily.seasonality = TRUE,
                        seasonality.mode = 'multiplicative')
